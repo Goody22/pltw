@@ -19,18 +19,29 @@ public class MediaLib
         Book book1 = new Book();
         System.out.println(book1);*/
         Song song1 = new Song("Repect", 1.29,6);
+        MediaFile.writeString(song1.getTitle()+ '|' + song1.getrating());
+       
         Song song2 = new Song("Help", 1.39,7);
+        //MediaFile.writeString(song2.getTitle());
+        MediaFile.writeString(song2.getTitle()+ '|' + song2.getrating());
+        
         Song song3 = new Song("Next", 1.13,9);
+        MediaFile.writeString(song3.getTitle()+ '|' + song3.getrating());
+        
         Song song4 = new Song("Yep", 1.17,9);
+        MediaFile.writeString(song4.getTitle()+ '|' + song4.getrating());
+        
         Song song5 = new Song("Yes", 1.15,4);
+        MediaFile.writeString(song5.getTitle()+ '|' + song5.getrating());
+        
         Song song6 = new Song("No", 1.03,9);
+        MediaFile.writeString(song6.getTitle()+ '|' + song6.getrating());
+        
         System.out.println(Song.gettotalCost());
         System.out.println(Song.getnumSong());
         System.out.println(Song.gettotalRating());
         System.out.println(Song.getnumAve());
         System.out.println(Song.getnumRate());
-        MediaFile.writeString(song2.getTitle());
-        //MediaFile.writeString("Help"| 7);
         MediaFile.saveAndClose();
         
    }

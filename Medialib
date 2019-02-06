@@ -1,0 +1,37 @@
+/**
+ * Write a description of class MediaLib here.
+ *
+ * @author (your name)
+ * @version (a version number or a date)
+ */
+public class MediaLib
+{
+    public static void main(){
+        System.out.println("Welcome to your Media Library.");
+        /*Song song1 = new Song();
+        System.out.println(song1);
+        song1.setTitle("Johnny B. Goode"); 
+        song1.setprice(2.99);
+        System.out.println(song1.getTitle());
+        System.out.println(song1.getPrice());
+        Movie movie1 = new Movie();
+        System.out.println(movie1);
+        Book book1 = new Book();
+        System.out.println(book1);*/
+        Song song1 = new Song("Repect", 1.29,6);
+        Song song2 = new Song("Help", 1.39,7);
+        Song song3 = new Song("Next", 1.13,9);
+        Song song4 = new Song("Yep", 1.17,9);
+        Song song5 = new Song("Yes", 1.15,4);
+        Song song6 = new Song("No", 1.03,9);
+        System.out.println(Song.gettotalCost());
+        System.out.println(Song.getnumSong());
+        System.out.println(Song.gettotalRating());
+        System.out.println(Song.getnumAve());
+        System.out.println(Song.getnumRate());
+        MediaFile.writeString(song2.getTitle());
+        //MediaFile.writeString("Help"| 7);
+        MediaFile.saveAndClose();
+        
+   }
+}

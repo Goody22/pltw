@@ -1,0 +1,65 @@
+import java.util.List;
+import java.util.ArrayList;
+
+public class ScrambledStrings
+{
+    /********************** Part (a) *********************/
+
+    /** Scrambles a given word.
+     *  @param word the word to be scrambled
+     *  @return the scrambled word (possibly equal to word)
+     *  Precondition: word is either an empty string or contains
+     *    only uppercase letters.
+     *  Postcondition: the string returned was created from word
+     *      as follows:
+     *   - the word was scrambled, beginning at the first letter
+     *      and continuing from left to right
+     *   - two consecutive letters consisting of "A" followed by
+     *        a letter that was not "A" were swapped
+     *   - letters were swapped at most once
+     */
+    public static String scrambleWord(String word)
+    {
+     String scramble = " ";
+     //declared a variable and leaves it blank
+     //&&s3.equals("E") && !s4.equals("E")
+     int pos= 0;
+     //declares a variable pos equal to 0
+     while (pos < word.length()-1){
+         // pos is less than the word length 
+         String s1 = word.substring(pos,pos+1);
+         
+         // string one is the word pos the first letter to s1
+         String s2 = word.substring(pos+1,pos+1);
+         
+         if(s1.equals("A") && !s2.equals("A")){
+             //if s1 equal as and s2 doesn't equal a
+             
+             scramble += s2+s1;
+             // swap the two 
+             pos +=1;
+             // add to the pos and move it down
+      }
+      else {
+         scramble += s1;
+         // make it move down one
+        }
+        pos+=1;
+      
+    }
+    scramble += word.substring(pos);
+      return scramble;
+}
+
+
+    /********************** Test *********************/
+    public static void main(String[] args)
+    {
+        System.out.println("\nTesting Part (a):\n");
+
+        String[] words = {"TAN", "ABRACADABRA", "WHOA",
+                "AARDVARK", "EGGS", "A", ""};
+        for (String word : words)
+            System.out.println(word + " becomes " + scrambleWord(word));
+    }
+}

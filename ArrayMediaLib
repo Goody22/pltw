@@ -57,6 +57,19 @@ for (Song showSong: topTenSongs){
 System.out.println(showSong.getTitle());
 }
 System.out.println("--Discount Price--");
-for (double p =
+int count = 1;
+for (Song song: topTenSongs){
+    if ((count % 3)==0){
+        song.setprice(.99);
+    
+    } 
+    else{
+        song.setprice(1.29);
+    }
+    count++;
+}
+for (Song showSong: topTenSongs){
+System.out.println(showSong.getTitle()+" Cost "+ showSong.getPrice());
+}
 }
 }

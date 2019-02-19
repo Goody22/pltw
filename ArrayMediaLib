@@ -81,6 +81,34 @@ public class ArrayMediaLib
             }
             numSong++;
         }
+        System.out.println("Finding Songs");
+        int index = SongFinder.findTitle(topTenSongs, "Jack");
+        if (index >=0 ) {
+            System.out.println("Found " + topTenSongs[index].getTitle());
+        }
+        else  {
+            System.out.println("Song not found!");
+        }
+        System.out.println("Part 2");
+        index=SongFinder.findTitle(topTenSongs,"Not here!");
+        if (index >= 0){
+            System.out.println("Found" + topTenSongs[index].getTitle());    }
+        else{
+            System.out.println("Song not found!");}
+        index = SongFinder.findTitle(null,null);
+        if (index >= 0){
+            System.out.println("Found" + topTenSongs[index].getTitle());  
+        }
+        else{
+            System.out.println("Song not found!");
+        }
+        System.out.println("Discount");
+        index = SongFinder.getIndexLastDiscount(topTenSongs, 1.00);
+        if (index >= 0 ) {
+            System.out.println("Discount found " + topTenSongs[index].getTitle());
+        }
+        else {
+            System.out.println("No songs are discounted");
+        }
     }
 }
-

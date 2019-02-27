@@ -1,0 +1,34 @@
+/**
+ * Write a description of class HitoLo here.
+ *
+ * @author (your name)
+ * @version (a version number or a date)
+ */
+public class HitoLo
+{
+    public static void main(){
+        int bsf=10;
+        int best =0;
+
+            Song[] topTenSongs = { 
+            new Song("Happy", 4), 
+            new Song("Hello", 7), 
+            new Song("Jack", 3),
+            new Song("Hometown girl",5),
+            new Song("We Built This city", 6), 
+            new Song("Dont stop believin", 9),
+            new Song("Best Shot",2),
+            new Song("Better off Gone",4),
+            new Song("Drunk me",6),
+            new Song("Drunk girl",1)
+
+        };
+        for (Song s : topTenSongs){
+            System.out.println(s.getTitle() + ","+ s.getrating());
+        }
+        for (Song rate : topTenSongs){
+            if (rate = bsf){
+            }
+        }
+    }
+}

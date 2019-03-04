@@ -1,0 +1,51 @@
+ 
+import javax.swing.JOptionPane;
+public class JO
+{
+    public static void main(String[]arg){
+        String result; 
+        //result = JOptionPane.showInputDialog; 
+        //String result2;;
+        //result2 = JOptionPane.showInputDialog(null,"Type 2 for Tire Rotation.");
+        //String result3; 
+        //result3 = JOptionPane.showInputDialog(null,"Break Inspection");
+        //String result4; 
+        //result4 = JOptionPane.showInputDialog(null,"Battery Check."); 
+
+        //JOptionPane.showMessageDialog(null, "Welcome to " + result + " ! ");
+        Service[] options = { 
+            new Service ("Oil Change", 25), 
+            new Service("Tire rotation",22),
+            new Service("Battery check", 15),
+            new Service("Brake inspection",5)
+        };
+            
+        String prompt = "Welcome to Cody's Car Care Shop! \nChoose your service:\n Type 1 for Oil change \n Type 2 for Tire rotation \n Type 3 for Battery check \n Type 4 for Brake inspection";
+        
+        String entry = JOptionPane.showInputDialog(null, prompt);
+        
+        while (!(entry.equals("1")) && !(entry.equals("2")) && !(entry.equals("3"))
+        && !(entry.equals("4"))) {
+            entry = JOptionPane.showInputDialog(null, prompt);
+            
+        }
+        //for (int i = 1; i == options.length - 1; i++ ){
+        System.out.println(options[1].getTitle());    
+        if (entry.equals("1")){
+            JOptionPane.showMessageDialog(null, "It's $" + options[1].getPrice() + " for " +  options[1].getTitle());
+        
+        }
+
+        /*else if (entry.equals("2"))
+            JOptionPane.showMessageDialog(null, "It's $" + Service.getPrice() + " for " +  Service.getTitle());
+
+        else if (entry.equals("3"))
+            JOptionPane.showMessageDialog(null, "It's $" + Service.getPrice() + " for " +  Service.getTitle());
+
+        else if (entry.equals("4"))
+            JOptionPane.showMessageDialog(null, "It's $" + Service.getPrice() + " for " +  Service.getTitle()); */
+
+    }
+}
+
+
